@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>猜燈謎</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F05D5E;
+            background-image: url('web4/3529023-PH.jpg');
+            color: #333;
+        }
+
+        h1 {
+            font-weight: 4000;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            border: 10px solid #ffec99;
+            font size ="6";
+        }
+
+        .wrapper {
+            border: 2px solid #f76707;
+            border-radius: 5px;
+            background-color: #fff4e6;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .box {
+            border: 2px solid #ffa94d;
+            border-radius: 5px;
+            background-color: #ffd8a8;
+            padding: 1em;
+            color: #d9480f;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .nested {
+            border: 2px solid #ffec99;
+            border-radius: 5px;
+            background-color: #fff9db;
+            padding: 1em;
+            margin: 5px 0;
+        }
+
+        .answer {
+            display: none;
+            padding: 1em;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+        }
+
+        #wallpaper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('3529023-PH.jpg');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FEC3A6;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        li:hover {
+            background-color: #FF928B;
+        }
+
+        .answer {
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wallpaper"></div>
+
+    <h1>猜燈謎</h1>
+
+    <ul>
+        
+        <li class="question">問題 1: 長的少，短的多，腳去踩，手去摸(提示:日常用品)？</li>
+        <div class="answer">
+            答案 1: 梯子。
+        </div>
+        
+        <li class="question">問題 2: 兩姐妹，一樣長，酸甜苦辣她先嚐(提示:日常用品)？</li>
+        <div class="answer">
+            答案 2: 筷子。
+        </div>
+        
+        <li class="question">問題 3: 說馬不像馬，路上沒有它。若用它做藥，要到海中抓。(提示:動物)？</li>
+        <div class="answer">
+            答案 3: 海馬。
+        </div>
+
+        <li class="question">問題 4:百姐妹，千姐妹，同床睡，各蓋被(提示:水果)？</li>
+        <div class="answer">
+            答案 4: 石榴。
+        </div>
+         <li class="question">問題 5:前面來只船，舵手在上邊，來時下小雨，走後路已乾(提示:日常用品)？</li>
+        <div class="answer">
+            答案 5: 熨斗。
+        </div>
+        <li class="question">問題 6:遠看兩個零，近看兩個零。有人用了行不得，有人不用不得行(提示:日常用品)？</li>
+        <div class="answer">
+            答案 6: 眼鏡。
+        </div>
+         <li class="question">問題 7:有硬有軟，有長有寬。白天空閒，夜晚上班(提示:日常用品)？</li>
+        <div class="answer">
+            答案 7: 床。
+        </div>
+        <li class="question">問題 8:薄薄一張口，能啃硬骨頭。吃肉不喝湯，吃瓜不嚼豆(提示:日常用品)？</li>
+        <div class="answer">
+            答案 8: 菜刀。
+        </div>
+        <li class="question">問題 9:他走了的英文怎麼說？</li>
+        <div class="answer">
+            答案 9: IKEA (台語諧音)。
+        </div>
+        
+    
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+            $('.question').click(function(){
+                $(this).next('.answer').slideToggle(300);
+            });
+        });
+    </script>
+</body>
+</html>
